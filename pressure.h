@@ -1,6 +1,6 @@
-#define MAX_VAL
+// Ignore this
 
-float pr_kPa;
-float sensorValue;
+#define PRESSURE_H
 
-float getPressure(void);
+float getPressureIn(void);
+float getPressureOut(void);
