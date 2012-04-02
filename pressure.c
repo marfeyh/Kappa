@@ -15,8 +15,8 @@ float getPressureIn() { // For the sensor in the skirt
 
 float getPressureOut() { // For the sensor on the outside
 
-float pr_kPa; // Pressure in kPa on the outside of the hovercraft
-  pr_kPa = ((float) analogRead(A1)/1023+0.04)/0.004; // Takes output of analog port 1 and converts it into kPa
+float pr_kPa2; // Pressure in kPa on the outside of the hovercraft
+  pr_kPa2 = ((float) analogRead(A1)/1023+0.04)/0.004; // Takes output of analog port 1 and converts it into kPa
 
-  return pr_kPa;
+  return pr_kPa2;
 }
