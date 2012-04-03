@@ -6,12 +6,8 @@
 
 void main() {
 
-  float test = getPressureIn();
+  float test = getPressure();
 
-  printf("Pressure is %.2f\n", test);
-
-  float test2 = getPressureOut();
-
-  printf("Pressure is %.2f\n", test2);
+  printf("Pressure is %f\n", test);
 
 }
