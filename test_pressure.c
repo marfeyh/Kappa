@@ -1,13 +1,14 @@
-
-// Just tested something with this
+// Written by: Rob Bruinsma
+// Used to test the pressure sensor code.
+//Doesn't work without sensors or changing sensor input to test values.
 
 #include <stdio.h>
 #include "pressure.c"
 
 void main() {
 
-  float test = getPressure();
+  int test = get_pressure();
 
-  printf("Pressure is %f\n", test);
+  printf("Difference in pressure is %d\n", test);
 
 }
