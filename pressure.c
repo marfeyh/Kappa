@@ -5,15 +5,17 @@
   Gets pressure info from pressure sensor, convert it to kPa.
  */
 
-float getPressure() { // For the sensor in the skirt
+int get_pressure() { // For the sensor in the skirt
 
   float pr_inside; // Pressure in kPa inside of the skirt
-  pr_inside = ((float) analogRead(A0)/1023+0.04)/0.004; // Takes output of analog port 0 and converts it into kPa
+  pr_inside = ((float) analogRead(A0)/1023+0.04)/0.000004; // Takes output of analog port 0 and converts it into kPa
 
   float pr_outside; // Pressure in kPa on the outside of the hovercraft
-  pr_outside = ((float) analogRead(A1)/1023+0.04)/0.004; // Takes output of analog port 1 and converts it into kPa
+  pr_outside = ((float) analogRead(A1)/1023+0.04)/0.000004; // Takes output of analog port 1 and converts it into kPa
 
-  return pr_inside - pr_outside;
+  int pressure = (int) (pr_inside - pr_outside);
+
+  return pressure;
 }
 
 
@@ -21,10 +23,10 @@ float getPressure() { // For the sensor in the skirt
 	Yuwei Chen  */
 
 float conversion_ktp(void){
-    return getPressure()*0.145;
+    return get_pressure()*0.145;
     }
 float conversion_ktb(void){
-    return getPressure()*0.0102;
+    return get_pressure()*0.0102;
     }
 float conversion_ptk(float psi){
     return psi*6.895;
